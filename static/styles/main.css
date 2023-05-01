@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(248, 242, 242);
+}
+
+.login
+{
+    margin-top: 200px;
+    margin-left: 770px;
+    width: 360px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    background:rgb(211, 209, 209); 
+}
+
+
+.login form .form-group {
+    margin-bottom: 12px;
+}
+
+.login form input[type="submit"] {
+    font-size: 20px;
+    margin-top: 15px;
+}
+.par-text {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register
+{
+    margin-top: 100px;
+    margin-left: 770px;
+    width: 360px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    background:rgb(211, 209, 209);
+}
+
+.register form input[type="submit"] {
+    font-size: 20px;
+    margin-top: 15px;
+}
+.register form .form-group {
+    margin-bottom: 12px;
+}

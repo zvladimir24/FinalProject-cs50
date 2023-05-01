@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+<h5 style="color:black;">Hello {{request.user}}</h5>
+
+{% endif %}
+
+<style>
+    .home-container{
+        display:grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+</style>
+
+
+<div class="home-container">
+    <div>
+        {% include 'base/topics_components.html' %}
+    </div>
+    <div>
+        {% if room_count == 1 %}
+
+        <h5>{{room_count}} room available</h5>
+
+        {% else %}
+        <h5>{{room_count}} rooms available</h5>
+
+        {% endif %}
+        <a href="{% url 'create-room' %}">Create Room</a>
+    
+        {% include 'base/feed_component.html'%}
+    </div>
+
+    <div>
+        {% include 'base/activity_component.html' %}
+
+
+    </div>
+    
+</div>
+
+{% endblock content %}

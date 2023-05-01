@@ -1,0 +1,9 @@
+<div class="alert alert-danger d-flex align-items-center" role="alert">
+    {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>

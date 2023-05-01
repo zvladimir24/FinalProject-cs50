@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+    <table>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_table}}
+        </table>
+        <input type="submit" value="Update"/>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+{% endblock content %}
