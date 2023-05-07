@@ -7,6 +7,11 @@ class RoomForm(ModelForm):
         model = Room
         fields = '__all__'
         exclude = ['host', 'participants']
+    def __init__(self, *args, **kwargs):
+        super(RoomForm, self).__init__(*args, **kwargs)
+
+        self.fields['name'].widget.attrs['class'] = 'form-control'
+        self.fields['description'].widget.attrs['class'] = 'form-control'
 
 
 class MyUserCreationForm(UserCreationForm):

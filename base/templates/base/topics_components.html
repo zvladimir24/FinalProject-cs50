@@ -1,13 +1,22 @@
-<h3>Browse Topics</h3>
-        <hr>
-        <div>
-            <a href="{% url 'home' %}">All</a>
-        </div>
 
+<div class="topics">
+
+
+    <div class="topics__header">
+        <h2 class="tpc-hdr">Browse Topics</h2>
+    </div>
+    
+        <div class="box">
+        
+            <a href="{% url 'home' %}" style="text-decoration:none" class="link-light" class="tpc-txt">All</a>
+    
+        </div>
         {% for topic in topics %}
-        <div>
-            <a href="{% url 'home' %}?q={{topic.name}}">{{topic.name}}</a>
-
-
+        <div class="box">
+            <a href="{% url 'home' %}?q={{topic.name}}" style="text-decoration:none" class="link-light">{{topic.name}}</a>
+    
         </div>
-        {% endfor%}
+        {% endfor %}
+
+
+</div>

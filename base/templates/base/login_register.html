@@ -21,6 +21,15 @@
 
     <p class="par-text">haven't signed up yet?</p>
     <a class="btn btn-success w-100" href="{% url 'register' %}">Sign up</a>
+    <div class="msgg">
+    {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+      {{ message }}
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
 </div>
 {% else %}
 <div class="register">
@@ -37,7 +46,6 @@
 </div>
 
 {% endif %}
-
 
 
 

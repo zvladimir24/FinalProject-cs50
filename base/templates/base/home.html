@@ -3,14 +3,14 @@
 {% block content %}
 
 {% if request.user.is_authenticated %}
-<h5 style="color:black;">Hello {{request.user}}</h5>
+<h5 style="color:black;" class="hello-user">Hello {{request.user}}</h5>
 
 {% endif %}
 
 <style>
     .home-container{
         display:grid;
-        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 3fr 2fr;
     }
 </style>
 
@@ -20,15 +20,18 @@
         {% include 'base/topics_components.html' %}
     </div>
     <div>
+        <h2 class="rms-txt">Rooms</h2>
         {% if room_count == 1 %}
 
-        <h5>{{room_count}} room available</h5>
+        <h5 class="rms-txt" >{{room_count}} room available</h5>
 
         {% else %}
-        <h5>{{room_count}} rooms available</h5>
+        <h5 class="rms-txt" >{{room_count}} rooms available</h5>
 
         {% endif %}
-        <a href="{% url 'create-room' %}">Create Room</a>
+        <div class="button-container-div">
+        <button class="button button1"><a href="{% url 'create-room' %}" style="text-decoration:none">Create Room</a></button>
+        </div>
     
         {% include 'base/feed_component.html'%}
     </div>
